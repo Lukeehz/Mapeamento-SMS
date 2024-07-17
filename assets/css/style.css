@@ -48,11 +48,11 @@
 
 .container {
     width: 100%;
-    max-width: 1140px; /* Tamanho máximo (ajuste conforme necessário) */
-    padding-left: 15px; /* Espaçamento lateral */
-    padding-right: 15px; /* Espaçamento lateral */
-    margin-left: auto; /* Centraliza o container */
-    margin-right: auto; /* Centraliza o container */
+    max-width: 1140px; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 /*CORES E TEXTOS*/
