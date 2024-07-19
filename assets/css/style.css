@@ -1,11 +1,20 @@
 /*RESET CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+body{
+    background-color:#2b2b2bff;
+}
 *{
+    font-family: baskervville;
     color: black;
+    text-align: right 45px;
     padding: 0;
     margin: 0;
 }
 .background-preto{
-    background: black;
+    text-align: left;
+    background: #dee3e2ff;
+    
 }
 
 /*CABECALHO*/
@@ -39,23 +48,74 @@
 
 /*ESTILIZAÇÃO DE LISTA*/
 .no-style-list{
+    display: none;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
 }
 
 
 /*Container */
+.container{ 
+    width: 80%;
+    max-width: 1200px; /* Tamanho máximo (ajuste conforme necessário) */
+    margin: 0 auto;
+    margin-top: 35px;
+    background-color: #dee3e2ff;
+    border-radius: 10px; 
+    padding: 20px;
 
-.container {
-    width: 100%;
-    max-width: 1140px; 
-    padding-left: 15px; 
-    padding-right: 15px; 
-    margin-left: auto;
-    margin-right: auto; 
+    
 }
 
+.tituloContainer {
+    font-size: 45px;
+    font-family: Baskervville;
+    text-align: center;
+    padding: 10px;
+}
+
+.tituloInfo {
+    margin-left: 25px;
+    font-size: 25px;
+    font-family: Baskervville;
+}
+
+
+.diagramaRede {
+    display: flex;
+    margin: 0 auto;
+    border: solid 1px black;
+    max-width: 70%;
+    transition: filter 0.6s ease-in-out;
+}
+
+.pavimento-p {
+    display: flex;
+    margin: 0 auto;
+    max-width: 70%;
+    border: solid 1px black;
+}
+
+.pavimento-s {
+    display: flex;
+    margin: 0 auto;
+    max-width: 70%;
+    border: solid 1px black;
+}
+.texto {
+    font-size: 25px;
+    font-family: Barkervville;
+    color: black;
+    line-height: 25px;
+    margin: 15px 15px;
+}
+
+.highlight {
+    color: #0e53e7;
+    text-decoration-line: underline;
+}
 /*CORES E TEXTOS*/
 .texto-branco{
     color: white;
@@ -66,9 +126,14 @@
 .fs1 {
     font-size: 2.5rem;
 }
-.fs3 {
-    font-size: 1.75rem;
+.computer{
+    position: center;
+    padding: 0%;
+    align-content: center;
+    display: flex;
+    margin-left: 45%;
 }
+
 
 .fs5 {
     font-size: 1.25rem;
@@ -126,6 +191,29 @@ a:visited{
 /*ESPAÇAMENTO - MARGIN*/
 .mauto{
     margin: auto;
+}
+
+/*FOOTER*/
+.footerFinal {
+    
+    background-color:#dee3e2ff;
+    display: flex;
+    width: auto;
+    margin-top: 35px;
+    text-align: center;
+
+}
+.nav-footer{
+    padding: 0%
+}
+
+.texto-footer{
+    font-family: Baskevville;
+    text-align: certer;
+    width: auto;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 15px 15px;
 }
 
 /*MEDIA QUERIES IMAGEM LOGO*/
