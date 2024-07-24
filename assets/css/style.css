@@ -68,10 +68,9 @@
 /*Container */
 .container{ 
     width: 80%;
-    max-width: 1200px; /* Tamanho máximo (ajuste conforme necessário) */
+    max-width: 1200px;
     margin: 0 auto;
     margin-top: 35px;
-    background-color: #dee3e2ff;
     border-radius: 10px; 
     padding: 20px;
 
@@ -130,6 +129,9 @@
 }
 .texto-branco{
     color: white;
+}
+.texto-preto{
+    color:black
 }
 .center-text{
     text-align: center;

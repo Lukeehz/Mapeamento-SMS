@@ -2,9 +2,13 @@ const body = document.querySelector("#body")
 const btnColor = document.querySelector("#btnColor")
 const imageCE = document.querySelector("#CE")
 const header = document.querySelector("header")
+const h1diagrama = document.querySelector("#h1diagrama")
+const mainDiagrama = document.querySelector("#mainDiagrama")
 
+//Bool auxiliar
 let claro = true
 
+//Evento que chama as funções de modo claro ou escuro
 btnColor.addEventListener("click", ()=>{
     if(claro===true){
         modoEscuro();
@@ -13,7 +17,13 @@ btnColor.addEventListener("click", ()=>{
     }
 })
 
+
+//Função que deixa  a tela em modo claro
 function modoClaro(){
+    mainDiagrama.classList.remove('background-preto')
+    mainDiagrama.classList.add('background-branco')
+    h1diagrama.classList.add('texto-preto')
+    h1diagrama.classList.remove('texto-branco')
     header.classList.add("background-branco")
     header.classList.remove("background-preto")
     body.classList.add("bgClaro")
@@ -22,7 +32,12 @@ function modoClaro(){
     claro=true
 }
 
+//Função que deixa a tela em modo escuro
 function modoEscuro(){
+    mainDiagrama.classList.add('background-preto')
+    mainDiagrama.classList.remove('background-branco')
+    h1diagrama.classList.remove('texto-preto')
+    h1diagrama.classList.add('texto-branco')
     header.classList.add("background-preto")
     header.classList.remove("background-branco")
     body.classList.remove("bgClaro")
