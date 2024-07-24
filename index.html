@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="author" content="Lukeehz , Bacelete Fabricio M M">
     <meta http-equiv="Content-Language" content="pt-BR">
     <meta name="keywords" content="Mapeamento, Mapeamento-Rede, SMS, Secretaria-municipal-de-saude, Contagem">
@@ -12,55 +13,46 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REDES - SMS</title>
 </head>
 
-<body>
-    <header class="background-preto texto-branco">
+<body class="bgClaro" id="body">
+    <header id="header" class="background-branco texto-branco">
         <div class="mauto">
-            <img src="assets/images/computer.gif" style="display: block;" class=" pulse mauto image-fluid">
+            <img src="assets/images/computer.gif" style="display: block;" class="pulse mauto image-fluid">
+            <span class="float-right">
+                <button id="btnColor" style="background: transparent; border: none;">
+                    <img id="CE" src="assets/images/soll.png" class="image-fluid pt3" style="width: 35%; cursor: pointer;">
+                </button>
+            </span>
         </div>
     </header>
 
     <main class="pt3">
         <div class="container">
-            <h2 class="tituloContainer">Diagrama de Rede SMS</h2>
-            <hr class="linha-h">
-            <h3 class="texto">O Projeto:</h3>
-                <img src="assets/images/diagrama.jpeg" class="image-fluid diagramaRede">
-                <hr class="linha-h">
-                <p class="texto">Área de Cobertura do Primero Pavimento:</p>
-                <img src="assets/images/pav1.jpeg" class ="image-fluid pavimento-p">
-                <hr class="linha-h">
-                <p class="texto"> Área de Cobertura do Segundo Pavimento: </p>
-                <img src="assets/images/pav2.jpeg" class="image-fluid pavimento-s">
-               
-            
-        </div>
-    </main>
-    <footer id="rodape" class="footerFinal">
-        <section>
-            <div class="div-footer" id="footer">
-                <p class="texto-footer">
-                    Nos dias atuais, a infraestrutura de TI é um dos pilares fundamentais para o
-                    funcionamento eficiente e seguro de qualquer organização. <span class="highlight negrito">O mapeamento de rede</span> é uma ferramenta crucial
-                    para entender a topologia da rede, identificar pontos de falha potenciais, otimizar o desempenho e
-                    garantir a segurança dos dados.</p>
-                    
-                    <p class="texto-footer">
-                    Neste contexto, nossa equipe de estagiários se dedicou a realizar um mapeamento detalhado da nossa rede.
-                    Sob orientação e supervisão dos nossos profissionais experientes, eles utilizaram diversas ferramentas e
-                    metodologias modernas para coletar, analisar e documentar todas as informações relevantes sobre nossa
-                    infraestrutura de rede. Nos próximos minutos, apresentaremos os detalhes deste mapeamento, incluindo a
-                    metodologia utilizada, as ferramentas empregadas, os principais achados e as recomendações propostas
-                    pela equipe de estagiários. Agradecemos a todos pela dedicação e empenho neste projeto, que certamente
-                    contribuirá significativamente para o fortalecimento e a segurança da nossa rede.
+            <h1 class="center-text">Diagrama de rede SMS</h1>
+            <div>
+                <img src="assets/images/diagrama.jpeg" class="image-fluid diagramaRede float-left" style="width: 50%">
+                <p class="float-clean">
+
                 </p>
             </div>
-        </section>
-    </footer>
-</body>
 
+            <div class="pt3">
+                <img src="assets/images/pav1.jpeg" class="image-fluid pavimento-p float-left" style="width: 50%">
+                <p class="float-clean">
+
+                </p>
+            </div>
+
+            <div class="float-clean pt3">
+                <img src="assets/images/pav2.jpeg" class="image-fluid pavimento-p float-left" style="width: 50%">
+                <p class="float-clean">
+
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="assets/JS/script.js"></script>
 </html>
