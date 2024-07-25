@@ -1,3 +1,4 @@
+//Const cores
 const body = document.querySelector("#body")
 const btnColor = document.querySelector("#btnColor")
 const imageCE = document.querySelector("#CE")
@@ -44,4 +45,25 @@ function modoEscuro(){
     body.classList.add("bgEscuro")
         imageCE.src = "assets/images/moon.png"
     claro=false
+}
+
+const btnColaps = document.querySelector("#btnColaps")
+const textColapse = document.querySelector("#textColapse")
+auxColaps = false
+
+btnColaps.addEventListener("click", ()=>{
+    if(auxColaps==false){
+        colapseInv()
+    }else{
+        ColapseVisivel()
+    }
+})
+
+function colapseInv (){
+    textColapse.classList.add("inv")
+    auxColaps = true
+}
+function ColapseVisivel (){
+    textColapse.classList.remove("inv")
+    auxColaps=false
 }
