@@ -100,16 +100,11 @@
 }
 
 .pavimento-p {
-    display: flex;
-    margin: 0 auto;
-    max-width: 70%;
     border: solid 1px black;
 }
 
 .pavimento-s {
-    display: flex;
-    margin: 0 auto;
-    max-width: 70%;
+
     border: solid 1px black;
 }
 .texto {
@@ -154,6 +149,12 @@
 
 .fs6 {
     font-size: 1rem;
+}
+
+/*Borda*/
+
+.border {
+    border: 1px solid black;
 }
 
 /*Botoes*/
@@ -225,6 +226,16 @@ a:visited{
 .px3 {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+}
+
+/*MARGIN TOP*/
+.pt3{
+    margin-top: 1rem !important;
+}
+
+/*MARGIN BOTTOM*/
+.pb3{
+    padding-bottom: 1rem !important;
 }
 
 /*ESPAÇAMENTO - MARGIN*/

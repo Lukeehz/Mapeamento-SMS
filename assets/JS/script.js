@@ -5,6 +5,8 @@ const imageCE = document.querySelector("#CE")
 const header = document.querySelector("header")
 const h1diagrama = document.querySelector("#h1diagrama")
 const mainDiagrama = document.querySelector("#mainDiagrama")
+const pav1 = document.querySelector("#pav1")
+const pav2 = document.querySelector("#pav2")
 
 //Bool auxiliar
 let claro = true
@@ -18,6 +20,11 @@ btnColor.addEventListener("click", ()=>{
     }
 })
 
+//Função que deixa as imagens em modo claro
+function imgClaro(){
+    pav1.src
+}
+
 
 //Função que deixa  a tela em modo claro
 function modoClaro(){
@@ -30,6 +37,8 @@ function modoClaro(){
     body.classList.add("bgClaro")
     body.classList.remove("bgEscuro")
     imageCE.src = "assets/images/soll.png"
+    pav1.src="assets/images/mapeamento_racks.png"
+    pav2.src="assets/images/mapeamento_racks_2.png"
     claro=true
 }
 
@@ -43,9 +52,16 @@ function modoEscuro(){
     header.classList.remove("background-branco")
     body.classList.remove("bgClaro")
     body.classList.add("bgEscuro")
-        imageCE.src = "assets/images/moon.png"
+    imageCE.src = "assets/images/moon.png"
+    pav1.src="assets/images/mapeamento_racks_branco.png"
+    pav2.src="assets/images/mapeamento_racks_2_branco.png"
+
     claro=false
 }
+
+/*
+COLAPSE
+*/
 
 const btnColaps = document.querySelector("#btnColaps")
 const textColapse = document.querySelector("#textColapse")
