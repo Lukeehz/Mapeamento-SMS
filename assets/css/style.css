@@ -27,12 +27,12 @@
 }
 
 /*CABECALHO*/
-.conteudo-cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header{
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
 }
-
 
 /*NAVBAR*/
 
@@ -169,17 +169,25 @@
 
 /*LINKS*/
 a{
-    color: whitesmoke;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.5rem;
 }
 
 a:hover {
-    color: rgb(255, 255, 200) !important;
+    color: purple !important;
 }
 a:visited{
     color: rgb(255, 198, 92)
 }
+.links{
+    text-align: center !important;
+    text-decoration: none;
+    display: inline;
+}
+
 
 /*ESPAÇAMENTOS - PADDING GERAL*/
 .p0{
@@ -223,9 +231,17 @@ a:visited{
 }
 
 /*ESPAÇAMENTOS - PADDING LEFT*/
+.px2 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
 .px3 {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+}
+
+.pauto{
+    padding: auto;
 }
 
 /*MARGIN TOP*/
@@ -240,7 +256,7 @@ a:visited{
 
 /*ESPAÇAMENTO - MARGIN*/
 .mauto{
-    margin: auto;
+    margin: auto !important
 }
 
 /*FOOTER*/
