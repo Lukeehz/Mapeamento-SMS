@@ -7,6 +7,7 @@ const h1diagrama = document.querySelector("#h1diagrama")
 const mainDiagrama = document.querySelector("#mainDiagrama")
 const pav1 = document.querySelector("#pav1")
 const pav2 = document.querySelector("#pav2")
+const links = document.querySelector(".links")
 
 //Bool auxiliar
 let claro = true
@@ -36,6 +37,8 @@ function modoClaro(){
     header.classList.remove("background-preto")
     body.classList.add("bgClaro")
     body.classList.remove("bgEscuro")
+    links.classList.add("text-preto")
+    links.classList.remove("text-branco")
     imageCE.src = "assets/images/soll.png"
     pav1.src="assets/images/mapeamento_racks.png"
     pav2.src="assets/images/mapeamento_racks_2.png"
@@ -52,6 +55,8 @@ function modoEscuro(){
     header.classList.remove("background-branco")
     body.classList.remove("bgClaro")
     body.classList.add("bgEscuro")
+    links.classList.remove("text-preto")
+    links.classList.add("text-branco")
     imageCE.src = "assets/images/moon.png"
     pav1.src="assets/images/mapeamento_racks_branco.png"
     pav2.src="assets/images/mapeamento_racks_2_branco.png"

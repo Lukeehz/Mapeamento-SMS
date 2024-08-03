@@ -80,7 +80,7 @@ header{
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 35px;
-    border-radius: 10px; 
+    border-radius: 20px; 
     padding: 20px;
 
     
@@ -123,19 +123,15 @@ header{
     margin: 15px 15px;
 }
 
-.highlight {
-    color: #0e53e7;
-    text-decoration-line: underline;
-}
 /*CORES E TEXTOS*/
 .negrito{
     font-weight: bold;
 }
 .texto-branco{
-    color: white;
+    color: white !important;
 }
 .texto-preto{
-    color:black
+    color:black !important;
 }
 .center-text{
     text-align: center;
@@ -188,8 +184,13 @@ a{
 a:hover {
     color: purple !important;
 }
+
+a:active{
+    
+}
+
 a:visited{
-    color: rgb(255, 198, 92)
+    color: rgb(204, 0, 102) !important;
 }
 .links{
     text-align: center !important;
