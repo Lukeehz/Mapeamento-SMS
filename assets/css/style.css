@@ -124,6 +124,9 @@ header{
 }
 
 /*CORES E TEXTOS*/
+.italico{
+    font-style: italic;
+}
 .negrito{
     font-weight: bold;
 }
@@ -197,7 +200,24 @@ a:visited{
     text-decoration: none;
     display: inline;
 }
+.listalimp{
+    list-style-type: none;
+}
 
+.dblock{
+    display: block;
+}
+.dinline{
+    display: inline;
+}
+
+.dinlineblock{
+    display: inline-block !important;
+}
+
+.tam50{
+    max-width: 50%;
+}
 
 /*ESPAÇAMENTOS - PADDING GERAL*/
 .p0{
@@ -222,9 +242,11 @@ a:visited{
 /*FLOAT'S*/
 .float-left {
     float: left;
+    margin-right: 1rem;
 }
 .float-right{
     float: right;
+    margin-left: 1rem;
 }
 .float-clean{
     clear: both;
@@ -307,6 +329,51 @@ a:visited{
 .inv{
     display: none ;
 }
+
+/*
+    SERVIDOR
+*/
+
+details {
+    background-color: #ffffff;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer; 
+    padding: 0.75rem;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+summary:hover {
+    background-color: #e0e0e0;
+}
+
+details[open] ul {
+    padding-top: 0.5rem;
+}
+
+details ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+details li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+
 
 /*MEDIA QUERIES IMAGEM LOGO*/
 

@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REDES - SMS</title>
+    <style>
+        /* Ajustes no aside */
+aside {
+    margin-left: 0; /* Remove qualquer margem esquerda */
+    max-width: calc(100% - 30%); /* Ajusta a largura para não exceder o espaço disponível */
+}
+
+/* Ajustes no details */
+section {
+    padding-top: 1rem; /* Corrige o padding superior */
+    margin-left: 0; /* Remove qualquer margem esquerda */
+}
+
+/* Ajuste para detalhes */
+details {
+    margin-left: 0; /* Remove qualquer margem esquerda */
+}
+
+        
+    </style>
 </head>
 
 <body class="bgClaro" id="body">
@@ -35,10 +55,52 @@
         </div>
     </header>
 
+
+
     <main class="" style="padding-top: 9rem;">
-        <section id="mainDiagrama" class="container background-branco">
-            <h1>servidores</h1>
-        </section>
+        <div id="mainDiagrama" class="container background-branco clearfix">
+
+            <aside class="float-left" id="">
+                <div style="max-width: 70%; width: 90%;">
+                    <h1 id="txtpv1">
+                      O que é um servidor?  
+                    </h1>
+                    <img src="assets/images/server.png" class="image-fluid float-right" alt="">
+                    <article id="asidetext">
+                        Um servidor de rede é um computador dedicado a gerenciar recursos de rede e fornecer serviços a outros computadores conectados à mesma rede. Esses serviços podem incluir armazenamento de arquivos, hospedagem de sites, gerenciamento de emails e controle de acesso de usuários. Servidores de rede são essenciais para o funcionamento eficiente de redes de computadores, permitindo a centralização de dados e recursos, além de facilitar a comunicação e a colaboração entre diferentes dispositivos e usuários.
+                    </article>
+                </div>
+            </aside>
+
+            <section class="float-right" style="max-width: 20%;">
+                <details class="center-text">
+                    <summary>Servidor PFSense</summary>
+                    <ul class="pt3 listalimp">
+                        <li class="italico">10.150.1.1</li>
+                    </ul>
+                    
+                    <ul class="pt3 listalimp">
+                        <summary>HYPER-V: 10.150.0.100</summary>
+                        <li class="italico">ACTIVE DIRECTORY: 10.150.0.250 (HYPER-V)</li>
+                        <li class="italico">ACTIVE DIRECTORY SEI: 10.150.0.3 (HYPER-V)</li>
+                        <li class="italico">SERVIDOR DE ARQUIVO: 10.150.0.6 (HYPER-V)</li>
+                        <li class="italico">SERVIDOR DE IMPRESSÃO: 10.150.0.8 (HYPER-V)</li>
+                        <li class="italico">SERVIDOR DA CONTROLADORA: 10.150.0.15 (HYPER-V)</li>
+                        <li class="italico">SERVIDOR DO CORREIOS: 10.150.0.12 (HYPER-V)</li>
+                    </ul>
+
+                    <ul class="pt3 listalimp">
+                        <summary>VSPHERE: 10.140.0.23</summary>
+                        <li class="italico">GLPI: 10.140.16.23</li>
+                        <li class="italico">SERVIDOR ESUS: 10.150.0.11</li>
+                        <li class="italico">VSPHERE VIRTUALIZAÇÃO: 10.150.6.231</li>
+                    </ul>
+                </details>
+            </section>
+            <div class="float-clean">
+                <!-- Limpa a flutuação -->
+            </div>
+        </div>
     </main>
 </body>
 <script src="assets/JS/script.js"></script>

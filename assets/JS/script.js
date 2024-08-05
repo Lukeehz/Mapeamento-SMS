@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainDiagrama = document.querySelector("#mainDiagrama");
     const pav1 = document.querySelector("#pav1");
     const pav2 = document.querySelector("#pav2");
-    const links = document.querySelectorAll(".links");
+    const txtdia = document.querySelector("#txtdia"), txtpv1= document.querySelector("#txtpv1"), txtpv2 = document.querySelector("#txtpv2"), asidetext = document.querySelector("#asidetext")
+    
 
     // Verifique se todos os elementos necessários existem antes de adicionar eventos
     if (btnColor && header && body) {
@@ -38,17 +39,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 body.classList.add("bgClaro");
                 body.classList.remove("bgEscuro");
             }
-            if (links.length > 0) {
-                links.forEach(link => {
-                    link.classList.add("text-preto");
-                    link.classList.remove("text-branco");
-                });
+
+            if (txtdia) {
+                txtdia.classList.remove("texto-branco");
+                txtdia.classList.add("texto-preto");
             }
+
+            if (txtpv1) {
+                txtpv1.classList.remove("texto-branco");
+                txtpv1.classList.add("texto-preto");
+            }
+            
+            if (txtpv2) {
+                txtpv2.classList.remove("texto-branco");
+                txtpv2.classList.add("texto-preto");
+            }
+            if (asidetext) {
+                asidetext.classList.remove("texto-branco");
+                asidetext.classList.add("texto-preto");
+            }
+
+
+
             if (imageCE) imageCE.src = "assets/images/soll.png";
             if (pav1) pav1.src = "assets/images/mapeamento_racks.png";
             if (pav2) pav2.src = "assets/images/mapeamento_racks_2.png";
             claro = true;
         }
+        
 
         function modoEscuro() {
             if (mainDiagrama) {
@@ -67,12 +85,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 body.classList.remove("bgClaro");
                 body.classList.add("bgEscuro");
             }
-            if (links.length > 0) {
-                links.forEach(link => {
-                    link.classList.remove("text-preto");
-                    link.classList.add("text-branco");
-                });
+
+            if (txtdia) {
+                txtdia.classList.add("texto-branco");
+                txtdia.classList.remove("texto-preto");
             }
+
+            if (txtpv1) {
+                txtpv1.classList.add("texto-branco");
+                txtpv1.classList.remove("texto-preto");
+            }
+
+            if (txtpv2) {
+                txtpv2.classList.add("texto-branco");
+                txtpv2.classList.remove("texto-preto");
+            }
+            if (asidetext) {
+                asidetext.classList.add("texto-branco");
+                asidetext.classList.remove("texto-preto");
+            }
+
             if (imageCE) imageCE.src = "assets/images/moon.png";
             if (pav1) pav1.src = "assets/images/mapeamento_racks_branco.png";
             if (pav2) pav2.src = "assets/images/mapeamento_racks_2_branco.png";
