@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainDiagrama = document.querySelector("#mainDiagrama");
     const pav1 = document.querySelector("#pav1");
     const pav2 = document.querySelector("#pav2");
-    const txtdia = document.querySelector("#txtdia"), txtpv1= document.querySelector("#txtpv1"), txtpv2 = document.querySelector("#txtpv2"), asidetext = document.querySelector("#asidetext")
+    const txtdia = document.querySelector("#txtdia"), txtpv1= document.querySelector("#txtpv1"), txtpv2 = document.querySelector("#txtpv2"), asidetext = document.querySelector("#asidetext"), tt1 = document.querySelector("#tt1"), tt2 = document.querySelector("#tt2"), tt3 = document.querySelector("#tt3")
     
 
     // Verifique se todos os elementos necessários existem antes de adicionar eventos
@@ -58,6 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 asidetext.classList.remove("texto-branco");
                 asidetext.classList.add("texto-preto");
             }
+            if (tt1) {
+                tt1.classList.remove("texto-branco");
+                tt1.classList.add("texto-preto");
+            }
+            if (tt2) {
+                tt2.classList.remove("texto-branco");
+                tt2.classList.add("texto-preto");
+            }
+            if (tt3) {
+                tt3.classList.remove("texto-branco");
+                tt3.classList.add("texto-preto");
+            }
 
 
 
@@ -103,6 +115,18 @@ document.addEventListener("DOMContentLoaded", () => {
             if (asidetext) {
                 asidetext.classList.add("texto-branco");
                 asidetext.classList.remove("texto-preto");
+            }
+            if (tt1) {
+                tt1.classList.add("texto-branco");
+                tt1.classList.remove("texto-preto");
+            }
+            if (tt2) {
+                tt2.classList.add("texto-branco");
+                tt2.classList.remove("texto-preto");
+            }
+            if (tt3) {
+                tt3.classList.add("texto-branco");
+                tt3.classList.remove("texto-preto");
             }
 
             if (imageCE) imageCE.src = "assets/images/moon.png";
