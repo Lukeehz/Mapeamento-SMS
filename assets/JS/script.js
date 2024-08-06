@@ -8,12 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainDiagrama = document.querySelector("#mainDiagrama");
     const pav1 = document.querySelector("#pav1");
     const pav2 = document.querySelector("#pav2");
-    const txtdia = document.querySelector("#txtdia"), txtpv1= document.querySelector("#txtpv1"), txtpv2 = document.querySelector("#txtpv2"), asidetext = document.querySelector("#asidetext"), tt1 = document.querySelector("#tt1"), tt2 = document.querySelector("#tt2"), tt3 = document.querySelector("#tt3")
+    const txtdia = document.querySelector("#txtdia"), txtpv1= document.querySelector("#txtpv1"), txtpv2 = document.querySelector("#txtpv2"), asidetext = document.querySelector("#asidetext"), tt1 = document.querySelector("#tt1"), tt2 = document.querySelector("#tt2"), tt3 = document.querySelector("#tt3");
     
-
     // Verifique se todos os elementos necessários existem antes de adicionar eventos
     if (btnColor && header && body) {
-        let claro = true;
+        let claro = loadTheme(); // Carregar o tema do Local Storage
+
+        // Aplicar o tema carregado
+        if (!claro) {
+            modoEscuro();
+        } else {
+            modoClaro();
+        }
 
         // Evento que chama as funções de modo claro ou escuro
         btnColor.addEventListener("click", () => {
@@ -22,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 modoClaro();
             }
+            saveTheme(claro); // Salvar o tema no Local Storage
         });
 
         function modoClaro() {
@@ -71,14 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 tt3.classList.add("texto-preto");
             }
 
-
-
             if (imageCE) imageCE.src = "assets/images/soll.png";
             if (pav1) pav1.src = "assets/images/mapeamento_racks.png";
             if (pav2) pav2.src = "assets/images/mapeamento_racks_2.png";
             claro = true;
+            saveTheme(claro); // Salvar o tema no Local Storage
         }
-        
 
         function modoEscuro() {
             if (mainDiagrama) {
@@ -133,6 +138,16 @@ document.addEventListener("DOMContentLoaded", () => {
             if (pav1) pav1.src = "assets/images/mapeamento_racks_branco.png";
             if (pav2) pav2.src = "assets/images/mapeamento_racks_2_branco.png";
             claro = false;
+            saveTheme(claro); // Salvar o tema no Local Storage
+        }
+
+        function saveTheme(isClaro) {
+            localStorage.setItem('theme', isClaro ? 'claro' : 'escuro');
+        }
+
+        function loadTheme() {
+            const theme = localStorage.getItem('theme');
+            return theme === 'escuro' ? false : true;
         }
     }
 });
