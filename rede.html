@@ -42,10 +42,10 @@
 
             <div class="border mt3">
                 <div class="mt3 " style="display: flex; align-items: flex-start; gap: 1rem;">
-                    <img src="assets/images/diagrama.jpeg" class="mauto tam50" id="mainDiagrama">
+                    <img src="assets/images/diagrama.jpeg" class="mauto tam50" id="mainDiagrama" alt="Diagrama de rede">
                     <article class="tam50 pt3 dinlineblock">
                         <h1 style="font-size: 1.5rem;" class="center-text" id="tt1">DIAGRAMA</h1>
-                        <p id="txtdia">
+                        <p id="txtdia" class="pt3">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque commodi dolore harum. Necessitatibus odit doloribus, eius veritatis numquam in sapiente?
                         </p>
                     </article>
@@ -54,11 +54,12 @@
 
             <div class="border mt3">
                 <div class="mt3 " style="display: flex; align-items: flex-start; gap: 1rem;">
-                    <img src="assets/images/mapeamento_racks.png" class="mauto tam50" id="pav1">
+                    <img src="assets/images/mapeamento_racks.png" class="mauto tam50" id="pav1" alt="Planta da área de cobertura de cada rack - Primeiro andar">
                     <article class="tam50 pt3 dinlineblock">
                         <h1 style="font-size: 1.5rem;" class="center-text" id="tt2">DIAGRAMA</h1>
-                        <p id="txtpv1">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque commodi dolore harum. Necessitatibus odit doloribus, eius veritatis numquam in sapiente?
+                        <p id="txtpv1" class="pt3">
+                            Nesta planta, identificamos qual rack está "Alimentando" cada setor. No primeiro andar, existem dois racks: o do data-center (azul) e o do clone (vermelho). 
+                            Ambos estão identificados por um pequeno retângulo em sua parte superior.
                         </p>
                     </article>
                 </div>
@@ -66,11 +67,12 @@
 
         <div class="border mt3">
             <div class="mt3 " style="display: flex; align-items: flex-start; gap: 1rem;">
-                <img src="assets/images/mapeamento_racks_2.png" class="mauto tam50" id="pav2">
+                <img src="assets/images/mapeamento_racks_2.png" class="mauto tam50" id="pav2" alt="Planta da área de cobertura do rack do gabinete - Segundo andar">
                 <article class="tam50 pt3 dinlineblock">
                     <h1 style="font-size: 1.5rem;" class="center-text" id="tt3">DIAGRAMA</h1>
-                    <p id="txtpv2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque commodi dolore harum. Necessitatibus odit doloribus, eius veritatis numquam in sapiente?
+                    <p id="txtpv2" class="pt3">
+                        Rack do segundo andar, no qual está localizado no gabinete. 
+                        O mesmo alimenta totalmente o segundo andar do prédio principal da secretaria de saúde. O mesmo é representado pela cor verde.
                     </p>
                 </article>
             </div>
@@ -78,7 +80,13 @@
 
         </section>
     </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
 </body>
 <script src="assets/JS/script.js"></script>
-
+<script src="assets/JS/modal.js"></script>
 </html>
