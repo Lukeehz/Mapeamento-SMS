@@ -56,6 +56,23 @@ header{
     height: auto !important;
 }
 
+/*ASIDE*/
+aside {
+    margin-left: 0;
+    max-width: calc(100% - 30%);
+}
+
+
+section {
+    padding-top: 1rem; 
+    margin-left: 0; 
+}
+
+
+details {
+    margin-left: 0;
+}
+
 .borda-img{
     filter: drop-shadow(1px 1px 10px #ccc);
 }
