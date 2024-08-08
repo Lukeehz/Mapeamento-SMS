@@ -2,13 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Constantes para selecionar elementos
     const body = document.querySelector("#body");
     const btnColor = document.querySelector("#btnColor");
+    const btnSwitch = document.querySelector("#btnSwitch");
     const imageCE = document.querySelector("#CE");
     const header = document.querySelector("header");
     const h1diagrama = document.querySelector("#h1diagrama");
     const mainDiagrama = document.querySelector("#mainDiagrama");
     const pav1 = document.querySelector("#pav1");
+    const pExterna = document.querySelector("#pExterna");
+    const tExterna = document.querySelector("#tExterna");
+    const pInterna = document.querySelector("#pInterna");
+    const tInterna = document.querySelector("#tInterna");
     const pav2 = document.querySelector("#pav2");
-    const txtdia = document.querySelector("#txtdia"), txtpv1= document.querySelector("#txtpv1"), txtpv2 = document.querySelector("#txtpv2"), asidetext = document.querySelector("#asidetext"), tt1 = document.querySelector("#tt1"), tt2 = document.querySelector("#tt2"), tt3 = document.querySelector("#tt3");
+    const txtdia = document.querySelector("#txtdia"),txtdia2 = document.querySelector("#txtdia2"), txtpv1= document.querySelector("#txtpv1"), txtpv2 = document.querySelector("#txtpv2"), asidetext = document.querySelector("#asidetext"), tt1 = document.querySelector("#tt1"), tt2 = document.querySelector("#tt2"), tt3 = document.querySelector("#tt3"), tt1emeio = document.querySelector("#tt1emeio")
     
     // Verifique se todos os elementos necessários existem antes de adicionar eventos
     if (btnColor && header && body) {
@@ -51,6 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 txtdia.classList.remove("texto-branco");
                 txtdia.classList.add("texto-preto");
             }
+            if (txtdia2) {
+                txtdia2.classList.remove("texto-branco");
+                txtdia2.classList.add("texto-preto");
+            }
 
             if (txtpv1) {
                 txtpv1.classList.remove("texto-branco");
@@ -69,6 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 tt1.classList.remove("texto-branco");
                 tt1.classList.add("texto-preto");
             }
+            if (tt1emeio) {
+                tt1emeio.classList.remove("texto-branco");
+                tt1emeio.classList.add("texto-preto");
+            }
             if (tt2) {
                 tt2.classList.remove("texto-branco");
                 tt2.classList.add("texto-preto");
@@ -76,6 +89,22 @@ document.addEventListener("DOMContentLoaded", () => {
             if (tt3) {
                 tt3.classList.remove("texto-branco");
                 tt3.classList.add("texto-preto");
+            }
+            if (pExterna) {
+                pExterna.classList.remove("texto-branco");
+                pExterna.classList.add("texto-preto");
+            }
+            if (tExterna) {
+                tExterna.classList.remove("texto-branco");
+                tExterna.classList.add("texto-preto");
+            }
+            if (pInterna) {
+                pInterna.classList.remove("texto-branco");
+                pInterna.classList.add("texto-preto");
+            }
+            if (tInterna) {
+                tInterna.classList.remove("texto-branco");
+                tInterna.classList.add("texto-preto");
             }
 
             if (imageCE) imageCE.src = "assets/images/soll.png";
@@ -108,6 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 txtdia.classList.remove("texto-preto");
             }
 
+            if (txtdia2) {
+                txtdia2.classList.add("texto-branco");
+                txtdia2.classList.remove("texto-preto");
+            }
+
             if (txtpv1) {
                 txtpv1.classList.add("texto-branco");
                 txtpv1.classList.remove("texto-preto");
@@ -125,6 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 tt1.classList.add("texto-branco");
                 tt1.classList.remove("texto-preto");
             }
+            if (tt1emeio) {
+                tt1emeio.classList.add("texto-branco");
+                tt1emeio.classList.remove("texto-preto");
+            }
             if (tt2) {
                 tt2.classList.add("texto-branco");
                 tt2.classList.remove("texto-preto");
@@ -132,6 +170,24 @@ document.addEventListener("DOMContentLoaded", () => {
             if (tt3) {
                 tt3.classList.add("texto-branco");
                 tt3.classList.remove("texto-preto");
+            }
+
+            if (pExterna) {
+                pExterna.classList.add("texto-branco");
+                pExterna.classList.remove("texto-preto");
+            }
+            if (tExterna) {
+                tExterna.classList.add("texto-branco");
+                tExterna.classList.remove("texto-preto");
+            }
+
+            if (pInterna) {
+                pInterna.classList.add("texto-branco");
+                pInterna.classList.remove("texto-preto");
+            }
+            if (tInterna) {
+                tInterna.classList.add("texto-branco");
+                tInterna.classList.remove("texto-preto");
             }
 
             if (imageCE) imageCE.src = "assets/images/moon.png";
@@ -150,4 +206,5 @@ document.addEventListener("DOMContentLoaded", () => {
             return theme === 'escuro' ? false : true;
         }
     }
+
 });
