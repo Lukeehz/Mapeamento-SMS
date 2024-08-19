@@ -1,0 +1,26 @@
+{
+  "name": "itmasters",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lukeehz/Mapeamento-SMS.git"
+  },
+  "author": "Lukeehz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lukeehz/Mapeamento-SMS/issues"
+  },
+  "homepage": "https://github.com/Lukeehz/Mapeamento-SMS#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
