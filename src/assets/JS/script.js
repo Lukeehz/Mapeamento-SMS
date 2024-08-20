@@ -107,9 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 tInterna.classList.add("texto-preto");
             }
 
-            if (imageCE) imageCE.src = "assets/images/soll.png";
-            if (pav1) pav1.src = "assets/images/mapeamento_racks.png";
-            if (pav2) pav2.src = "assets/images/mapeamento_racks_2.png";
+            if (imageCE) imageCE.src = "/images/soll.png";
+            if (pav1) pav1.src = "/images/mapeamento_racks.png";
+            if (pav2) pav2.src = "/images/mapeamento_racks_2.png";
             claro = true;
             saveTheme(claro); // Salvar o tema no Local Storage
         }
@@ -190,9 +190,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 tInterna.classList.remove("texto-preto");
             }
 
-            if (imageCE) imageCE.src = "assets/images/moon.png";
-            if (pav1) pav1.src = "assets/images/mapeamento_racks_branco.png";
-            if (pav2) pav2.src = "assets/images/mapeamento_racks_2_branco.png";
+            if (imageCE) imageCE.src = "/images/moon.png";
+            if (pav1) pav1.src = "/images/mapeamento_racks_branco.png";
+            if (pav2) pav2.src = "/images/mapeamento_racks_2_branco.png";
             claro = false;
             saveTheme(claro); // Salvar o tema no Local Storage
         }
