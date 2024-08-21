@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400; 
+    font-style: normal;
+  }
+
+  *{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-align: right 45px;
+    padding: 0;
+    margin: 0;
+}
+
+.textcenter{
+    text-align: center;
+}
+
+.textwhite{
+    color: white;
+}
+
+.dblock{
+    display: block;
+}
+
+body{
+    background-color:#044040
+}
+.bordas{
+    border: 1px solid black;
+}
+.m-auto{
+    margin: auto;
+}
+.w50{
+    max-width: 50%;
+}
