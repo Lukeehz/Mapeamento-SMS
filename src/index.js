@@ -21,7 +21,7 @@ app.use("/itmasters", rotas);
 
 // Rota pública para mostrar uma mensagem de boas-vindas
 app.get("/", (req, res) => {
-    res.redirect("auth/login")
+    res.status(200).json({ msg: "Bem-vindo à API Itmasters" });
 });
 
 // Rota para exibir a página de login
@@ -119,6 +119,9 @@ app.post("/auth/login", async (req, res) => {
         const secret = process.env.SECRET;
         const token = jwt.sign({ id: usuarios._id }, secret);
         res.status(200).json({ msg: "Logado com sucesso", token });
+
+        // Nota: o redirecionamento não funcionará diretamente aqui,
+        // pode ser necessário lidar com redirecionamento no lado do cliente (navegador)
     } catch (error) {
         console.log(error);
         res.status(500).json({ msg: "Aconteceu um erro no servidor" });
@@ -132,8 +135,6 @@ app.use(express.static(path.join(__dirname, "../public/")));
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(basePath, '404.html'));
 });
-
-//Conectando no MongoDB/Atlas e escutando a porta
 
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.pm52e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     .then(() => {
