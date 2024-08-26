@@ -1,7 +1,7 @@
 # Mapeamento-SMS
 
 
-![Minha Imagem](images/logosus.png)
+![OIG1](https://github.com/Lukeehz/Mapeamento-SMS/blob/main/public/images/logosus.png?raw=true)
 
 Nos dias atuais, a infraestrutura de TI é um dos pilares fundamentais para o funcionamento eficiente e seguro de qualquer organização. O mapeamento de rede é uma ferramenta crucial para entender a topologia da rede, identificar pontos de falha potenciais, otimizar o desempenho e garantir a segurança dos dados.
 
