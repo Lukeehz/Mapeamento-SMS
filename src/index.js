@@ -18,10 +18,19 @@ app.use(express.urlencoded({ extended: true }));
 
 const User = require("./models/User");
 
-app.use("/itmasters", rotas);
+// Variável global para controle de acesso
+let isLoggedIn = false;
+
+app.use("/itmasters", (req, res, next) => {
+    if (isLoggedIn) {
+        next();
+    } else {
+        res.redirect("/auth/login"); // Redireciona para a página de login
+    }
+}, rotas);
 
 app.get("/", (req, res) => {
-    res.redirect("auth/login")
+    res.redirect("auth/login");
 });
 
 // Rota para exibir a página de login
@@ -118,6 +127,7 @@ app.post("/auth/login", async (req, res) => {
     try {
         const secret = process.env.SECRET;
         const token = jwt.sign({ id: usuarios._id }, secret);
+        isLoggedIn = true; // Marca como logado
         res.status(200).json({ msg: "Logado com sucesso", token });
     } catch (error) {
         console.log(error);
@@ -133,8 +143,7 @@ app.use((req, res, next) => {
     res.status(404).sendFile(path.join(basePath, '404.html'));
 });
 
-//Conectando no MongoDB/Atlas e escutando a porta
-
+// Conectando no MongoDB/Atlas e escutando a porta
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.pm52e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     .then(() => {
         app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
