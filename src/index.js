@@ -9,17 +9,17 @@ const rotas = require('./router');
 const app = express();
 const port = 3000;
 
+
 // Caminho para arquivos HTML
 const basePath = path.join(__dirname, "../public/html");
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // Middleware para processar dados de formulário
+app.use(express.urlencoded({ extended: true })); 
 
 const User = require("./models/User");
 
 app.use("/itmasters", rotas);
 
-// Rota pública para mostrar uma mensagem de boas-vindas
 app.get("/", (req, res) => {
     res.redirect("auth/login")
 });

@@ -1,6 +1,8 @@
 document.getElementById('loginForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    console.log("Iniciando Login")
+
     const user = document.getElementById('user').value;
     const password = document.getElementById('password').value;
 
@@ -29,3 +31,5 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
         alert('Erro ao fazer login. Tente novamente.');
     }
 });
+
+console.log("Login feito")
