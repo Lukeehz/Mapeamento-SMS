@@ -27,7 +27,14 @@ app.use("/itmasters", (req, res, next) => {
     } else {
         res.redirect("/auth/login"); // Redireciona para a página de login
     }
+    
 }, rotas);
+
+app.get("/auth/logout", (req, res) => {
+    isLoggedIn = false; 
+    res.redirect("/auth/login");
+})
+
 
 app.get("/", (req, res) => {
     res.redirect("auth/login");
@@ -146,7 +153,7 @@ app.use((req, res, next) => {
 // Conectando no MongoDB/Atlas e escutando a porta
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.pm52e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     .then(() => {
-        app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
+        app.listen(port, () => console.log(`Servidor rodando na porta ${port} acesse http://localhost:${port}`));
     })
     .catch((err) => {
         console.log(err);
