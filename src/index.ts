@@ -4,13 +4,12 @@ const mongoose = require('mongoose');
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const path = require("path");
-const rotas = require('./router');
+const rotas = require('./router/index.ts');
 
 const app = express();
 const port = 80;
 
 
-// Caminho para arquivos HTML
 const basePath = path.join(__dirname, "../public/html");
 
 app.use(express.json());
@@ -18,10 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 
 const User = require("./models/User");
 
-// Variável global para controle de acesso
 let isLoggedIn = false;
 
-app.use("/itmasters", (req, res, next) => {
+app.use("/itmasters", (req:any, res:any, next:any) => {
     if (isLoggedIn) {
         next();
     } else {
@@ -30,23 +28,23 @@ app.use("/itmasters", (req, res, next) => {
     
 }, rotas);
 
-app.get("/auth/logout", (req, res) => {
+app.get("/auth/logout", (req:any, res:any) => {
     isLoggedIn = false; 
     res.redirect("/auth/login");
 })
 
 
-app.get("/", (req, res) => {
+app.get("/", (req:any, res:any) => {
     res.redirect("auth/login");
 });
 
 // Rota para exibir a página de login
-app.get("/auth/login", (req, res) => {
+app.get("/auth/login", (req:any, res:any) => {
     res.sendFile(path.join(basePath, 'index.html'));
 });
 
 // Rota privada para obter informações do usuário
-app.get("/user/:id", checandoToken, async (req, res) => {
+app.get("/user/:id", checandoToken, async (req:any, res:any) => {
     const id = req.params.id;
     const user = await User.findById(id, '-password');
 
@@ -57,7 +55,7 @@ app.get("/user/:id", checandoToken, async (req, res) => {
     res.status(200).json({ user });
 });
 
-function checandoToken(req, res, next) {
+function checandoToken(req:any, res:any, next:any) {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
 
@@ -75,7 +73,7 @@ function checandoToken(req, res, next) {
 }
 
 // Rota para registrar um novo usuário
-app.post("/auth/register", async (req, res) => {
+app.post("/auth/register", async (req:any, res:any) => {
     const { name, user, password } = req.body;
 
     if (!name) {
@@ -113,7 +111,7 @@ app.post("/auth/register", async (req, res) => {
 });
 
 // Rota para autenticação
-app.post("/auth/login", async (req, res) => {
+app.post("/auth/login", async (req:any, res:any) => {
     const { user, password } = req.body;
 
     if (!user || !password) {
@@ -146,7 +144,7 @@ const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASS;
 
 app.use(express.static(path.join(__dirname, "../public/")));
-app.use((req, res, next) => {
+app.use((req:any, res:any, next:any) => {
     res.status(404).sendFile(path.join(basePath, '404.html'));
 });
 
@@ -155,6 +153,6 @@ mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.pm52e.mongodb.n
     .then(() => {
         app.listen(port, () => console.log(`Servidor rodando na porta ${port} acesse http://localhost:${port}`));
     })
-    .catch((err) => {
+    .catch((err: any) => {
         console.log(err);
     });
